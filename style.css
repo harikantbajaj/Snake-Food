@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #555453, #49484d); /* Peachy gradient */
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(20, 30px);
+  grid-template-rows: repeat(20, 30px);
+  background: linear-gradient(45deg, #49A09D, #5F2C82); 
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  animation: glow 3s ease infinite alternate;
+  color: #49A09D;
+}
+
+.grid {
+  display: grid;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.snake, .snake-head {
+  background-color: #F9D342; 
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.snake-head {
+  transform: rotate(45deg);
+}
+
+.snake:hover, .snake-head:hover {
+  background-color: #F5A623; 
+}
+
+.apple {
+  background-color: #68B684; 
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  animation: rotate 5s linear infinite;
+}
+
+.apple:hover {
+  background-color: #5AA469;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1{
+  color: #68B684;
+}
+.scoreboard{
+  color: #68B684;
+}
+
+
+h2, h3 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#gameOver {
+  position: absolute;
+  visibility: hidden;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 24px;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#gameOver.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#restart {
+  padding: 10px 30px;
+  background-color: #FF5252; 
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#restart:hover {
+  background-color: #E53935; 
+}

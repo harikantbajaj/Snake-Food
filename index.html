@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='style.css'>
+  <title>Snake Game</title>
+</head>
+
+<body>
+  <h1>PLAY SNAKE/FOOD</h1>
+
+  <div class="scoreboard">
+    Score: <span id="score">0</span> |
+    Level: <span id="level">1</span> |
+    Speed: <span class="speed">2</span>
+  </div>
+
+
+
+  <audio id='gameover-audio' src="https://audio.code.org/goal1.mp3"></audio>
+  <audio id='apple-audio' src="https://audio.code.org/failure1.mp3"></audio>
+
+  <section id='gameOver'>
+    <h2 class='text'>Game Over !</h2>
+    <h2>
+      <button id='restart'>Restart</button>
+    </h2>
+  </section>
+  <div class='container'>
+  </div>
+
+  <script src='script.js'></script>
+</body>
+
+</html>
